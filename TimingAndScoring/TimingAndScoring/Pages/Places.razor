@@ -1,0 +1,26 @@
+﻿@page "/places"
+@using TimingAndScoring.Data;
+
+<h1>Places</h1>
+
+<div class="riders">
+    @foreach (var rider in _riderList)
+    {
+        <div class="rider">
+            <RiderPlate CurrentPlace=@rider.CurrentPlace></RiderPlate>
+        </div>
+    }
+</div>
+
+@functions {
+    int i = 0;
+    private List<Rider> _riderList = new List<Rider>();
+
+    protected override void OnInitialized()
+    {
+        _riderList.Add(new Rider { CurrentPlace = 1, Number = 3 });
+    }
+
+}
+
+

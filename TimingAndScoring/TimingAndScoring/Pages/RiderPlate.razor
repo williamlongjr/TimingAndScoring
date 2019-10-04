@@ -1,0 +1,26 @@
+﻿@page "/rider"
+
+<div class="riderPlate">
+    <label></label>
+    @CurrentPlace
+</div>
+
+@code {
+
+    [Parameter]
+    public int CurrentPlace { get; set; }
+    [Parameter]
+    public int Number { get; set; }
+    [Parameter]
+    public string LastName { get; set; }
+    [Parameter]
+    public string SecondsDown { get; set; }
+    [Parameter]
+    public int LapsDown { get; set; }
+    [Parameter]
+    public double LastLapTime { get; set; }
+    [Parameter]
+    public int SeasonPoints { get; set; }
+    [Parameter]
+    public int SeasonPosition { get; set; }
+}
